@@ -3,26 +3,29 @@ body {
     line-height: 1.5;
 }
 
-header, main, footer {
-    margin: 1rem auto;
+header,
+main,
+footer {
     max-width: 720px;
 }
 
-header, footer {
+header,
+footer {
     border-style: double;
-    background-color: #396E94;
+    background-color: #396e94;
     color: #fff;
     text-align: center;
-    align-items: center;
     border-radius: 12px;
     border-width: 2px;
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    font-size: 1.1rem;
-    padding: 1.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: center;
 }
 
 main {
