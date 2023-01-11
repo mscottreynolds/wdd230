@@ -29,7 +29,12 @@ header {
     padding: 1rem;
 }
 
+#signature {
+    font-family: 'Great Vibes', Times, serif;
+}
+
 main {
+    margin-left: 2rem;
     display: flex;
     flex-direction: column;
 }
