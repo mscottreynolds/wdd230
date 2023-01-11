@@ -29,8 +29,8 @@ header {
     padding: 1rem;
 }
 
-#signature {
-    font-family: 'Great Vibes', Times, serif;
+h1, h2, #signature {
+    font-family: 'Merienda', Times, serif;
 }
 
 main {
