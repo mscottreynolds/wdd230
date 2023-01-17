@@ -14,11 +14,8 @@ footer {
 
 header,
 footer {
-    border-style: double;
     background-color: #396e94;
     color: #fff;
-    border-radius: 12px;
-    border-width: 2px;
     text-align: center;
 }
 
@@ -30,8 +27,23 @@ header {
     padding: 1rem;
 }
 
+header img {
+    width: 100px;
+    height: auto;
+    
+}
+
 h1, h2 {
     font-family: 'Merienda', Times, serif;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
 }
 
 #signature {
@@ -48,8 +60,3 @@ footer {
     padding: 0.8rem;
 }
 
-header img {
-    border-style: double;
-    border-radius: 12px;
-    border-width: 2px;
-}
