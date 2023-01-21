@@ -6,6 +6,7 @@ body {
 
 header,
 main,
+nav,
 footer {
     max-width: 720px;
     margin: 0 auto;
@@ -49,10 +50,34 @@ h2 {
 #signature {
     font-family: 'Dancing Script', cursive;
 }
+
 main {
-    margin-left: 2rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
+}
+
+
+nav {
+	background-color: #36454f;
+	margin: 0 auto;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    padding-left: 0;
+}
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+nav ul li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 0.5rem;
+	text-decoration: none;
+	font-size: 0.95rem;
+	background: linear-gradient(90deg, transparent, yellow, transparent) bottom /
+		var(--d, 0) 3px no-repeat;
+	transition: 0.5s;
 }
 
 footer {
