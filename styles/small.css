@@ -33,6 +33,11 @@ header img {
     display: none;  /* Hide image in small view */
 }
 
+hr {
+    margin: auto 0px;
+    width: 100%;
+}
+
 h1, h2 {
     font-family: 'Merienda', Times, serif;
 }
@@ -111,4 +116,8 @@ footer {
 
 .small1 {
     font-size: 0.8rem;
+}
+
+.width200 {
+    width: 200px;
 }

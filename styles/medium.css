@@ -23,6 +23,11 @@
         display: flex;         
     }
 
+    hr {
+        /* margin: auto 0px; */
+        width: 31.5em;
+    }
+
     nav ul { display: flex; }
     nav ul li { flex: 1 1 auto; } 
 }
