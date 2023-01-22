@@ -1,8 +1,33 @@
-body {
 
+:root {
+    --primary-color: #396e94;
+    --secondary-color: #36454f;
+    --accent1-color: #444444;
+    --accent2-color: yellow;
+  
+    --heading-font: 'Merienda', Times, serif;
+    --paragraph-font: Arial, Helvetica, sans-serif;
+    --signature-font: 'Dancing Script', cursive;
+  
+    --header-background-color: var(--primary-color);
+    --paragraph-text-on-white: black;
+    --paragraph-text-on-color: white;
+    --nav-background-color: var(--secondary-color);
+    --nav-link-color: white;
+    --nav-hover-color: black;
+    --nav-hover-background-color: white;
+    --nav-active-link-color: var(--accent2-color);
+    --logo-box-shadow-color: var(--accent1-color);
+    --box-shadow-color: var(--accent1-color);
+    --nav-box-shadow-color: rgba(0, 0, 0, 0.9);
+
+}
+  
+  
+body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--paragraph-font);
 }
 
 header,
@@ -16,8 +41,8 @@ footer {
 
 header,
 footer {
-    background-color: #396e94;
-    color: #fff;
+    background-color: var(--header-background-color);
+    color: var(--paragraph-text-on-color);
     text-align: center;
 }
 
@@ -35,7 +60,7 @@ hr {
 }
 
 h1, h2 {
-    font-family: 'Merienda', Times, serif;
+    font-family: var(--heading-font);
 }
 
 
@@ -49,16 +74,8 @@ h2 {
     font-size: 1rem;
 }
 
-#signature {
-    font-family: 'Dancing Script', cursive;
-}
-
-.logo {
-    box-shadow: 0 0 30px #444;
-    border-style: double;
-    border-radius: 12px;
-    border-width: 2px;
-    /* display: flex;          */
+main p {
+    color: var(--paragraph-text-on-white);
 }
 
 header img {
@@ -73,9 +90,9 @@ main {
 
 
 nav {
-	background-color: #36454f;
+	background-color: var(--nav-background-color);
 	margin: 0 auto;
-	box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+	box-shadow: 0 0 30px var(--nav-box-shadow-color);
     padding-left: 0;
 }
 nav ul {
@@ -86,7 +103,7 @@ nav ul {
 
 nav ul li a {
 	display: block;
-	color: #fff;
+	color: var(--nav-link-color);
 	text-align: center;
 	padding: 0.5rem;
 	text-decoration: none;
@@ -95,8 +112,8 @@ nav ul li a {
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-color);
 }
 
 footer {
@@ -104,8 +121,25 @@ footer {
     padding: 0.8rem;
 }
 
+.signature {
+    font-family: var(--signature-font);
+}
+
+.heading-font {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+}
+
+.logo {
+    box-shadow: 0 0 30px var(--logo-box-shadow-color);
+    border-style: double;
+    border-radius: 12px;
+    border-width: 2px;
+    /* display: flex;          */
+}
+
 .active {
-	color: yellow;
+	color: var(--nav-active-link-color);
 }
 
 .large2 {
@@ -119,3 +153,24 @@ footer {
 .width200 {
     width: 200px;
 }
+
+.primary-color { background-color: var(--primary-color);  color: white;}
+.secondary-color { background-color: var(--secondary-color);  color: white;}
+.accent1-color { background-color: var(--accent1-color);  color: white;}
+.accent2-color { background-color: var(--accent2-color); color: black;}
+
+.table-colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+    color: black;
+  }
+  .table-colors th {
+    background-color: #999;
+  }
+
+  .table-colors td{
+    width: 25%;
+    height: 3em;
+  }
