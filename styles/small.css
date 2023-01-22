@@ -1,4 +1,5 @@
 body {
+
     font-size: 16px;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,9 +30,7 @@ header {
 }
 
 header img {
-    width: 100px;
-    height: auto;
-    
+    display: none;  /* Hide image in small view */
 }
 
 h1, h2 {
@@ -41,6 +40,8 @@ h1, h2 {
 
 h1 {
     font-size: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 h2 {
@@ -49,6 +50,16 @@ h2 {
 
 #signature {
     font-family: 'Dancing Script', cursive;
+}
+
+#logo {
+    font-family: 'Merienda', Times, serif;
+    font-size: 1.5rem;
+    box-shadow: 0 0 30px #444;
+    border-style: double;
+    border-radius: 12px;
+    border-width: 2px;
+    padding: 1rem;
 }
 
 main {
@@ -67,7 +78,9 @@ nav {
 nav ul {
 	list-style-type: none;
 	overflow: hidden;
+    padding: 0;
 }
+
 nav ul li a {
 	display: block;
 	color: #fff;
@@ -75,9 +88,12 @@ nav ul li a {
 	padding: 0.5rem;
 	text-decoration: none;
 	font-size: 0.95rem;
-	background: linear-gradient(90deg, transparent, yellow, transparent) bottom /
-		var(--d, 0) 3px no-repeat;
 	transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 footer {
@@ -85,3 +101,14 @@ footer {
     padding: 0.8rem;
 }
 
+.active {
+	color: yellow;
+}
+
+.large2 {
+    font-size: 2.2rem;
+}
+
+.small1 {
+    font-size: 0.8rem;
+}
