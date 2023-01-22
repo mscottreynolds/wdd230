@@ -29,10 +29,6 @@ header {
     padding: 1rem;
 }
 
-header img {
-    display: none;  /* Hide image in small view */
-}
-
 hr {
     margin: auto 0px;
     width: 100%;
@@ -57,14 +53,16 @@ h2 {
     font-family: 'Dancing Script', cursive;
 }
 
-#logo {
-    font-family: 'Merienda', Times, serif;
-    font-size: 1.5rem;
+.logo {
     box-shadow: 0 0 30px #444;
     border-style: double;
     border-radius: 12px;
     border-width: 2px;
-    padding: 1rem;
+    /* display: flex;          */
+}
+
+header img {
+    display: none;  /* Hide image in small view */
 }
 
 main {

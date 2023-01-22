@@ -15,12 +15,8 @@
     }    
 
     header img {
-        box-shadow: 0 0 30px #444;
-        border-style: double;
-        border-radius: 12px;
-        border-width: 2px;
         width: 120px;
-        display: flex;         
+        display: flex;
     }
 
     hr {
