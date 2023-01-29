@@ -88,9 +88,20 @@ main {
 nav {
     background-color: var(--nav-background-color);
     margin: 0 auto;
-    box-shadow: 0 0 30px var(--nav-box-shadow-color);
+    /* box-shadow: 0 0 30px var(--nav-box-shadow-color); */
     padding-left: 0;
 }
+
+nav button {
+    margin: .2rem 2vw;
+    background: transparent;
+    border-width: 1px;
+    border-color: white;
+    font-size: 1rem;
+    color: white;
+    /* color: #555; */
+}
+
 nav ul {
     list-style-type: none;
     overflow: hidden;
@@ -110,6 +121,19 @@ nav ul li a {
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
+}
+
+
+#hamburgerBtn span:nth-child(1) {display: block; }
+#hamburgerBtn span:nth-child(2) {display: none; }
+
+#hamburgerBtn.open span:nth-child(1) {display: none; }
+#hamburgerBtn.open span:nth-child(2) {display: block; }
+
+#current-date {
+    margin: 1rem;
+    background-color: var(--accent1-color);
+    padding: 0.5rem;
 }
 
 footer {
