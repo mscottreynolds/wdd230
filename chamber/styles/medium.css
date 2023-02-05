@@ -12,7 +12,7 @@
         border-style: double;
         border-radius: 12px;
         border-width: 2px;
-    }    
+    }
 
     header img {
         width: 120px;
@@ -24,6 +24,5 @@
         width: 31.5em;
     }
 
-    nav ul { display: flex; }
-    nav ul li { flex: 1 1 auto; } 
+    
 }

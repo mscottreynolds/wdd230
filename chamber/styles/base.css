@@ -30,7 +30,8 @@ body {
 header,
 main,
 nav,
-footer {
+footer,
+section {
     max-width: 720px;
     margin: 0 auto;
     align-items: center;
@@ -90,22 +91,28 @@ nav {
     margin: 0 auto;
     /* box-shadow: 0 0 30px var(--nav-box-shadow-color); */
     padding-left: 0;
+    width: 100%;
 }
 
 nav button {
-    margin: .2rem 2vw;
+    margin: 0.2rem 2vw;
     background: transparent;
     border-width: 1px;
     border-color: white;
     font-size: 1rem;
     color: white;
     /* color: #555; */
+    float: left;
 }
 
 nav ul {
     list-style-type: none;
     overflow: hidden;
     padding: 0;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 nav ul li a {
@@ -118,22 +125,61 @@ nav ul li a {
     transition: 0.5s;
 }
 
+nav button {
+    margin: 0.2rem 2vw;
+    /* background: transparent; */
+    /* border: none; */
+    font-size: 2rem;
+    /* color: #555; */
+}
+
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
 }
 
+section {
+    display: flex;
+    padding: 0.8em;
+    margin: 0.8em;
+    border-width: 1px;
+    border-color: black;
+    background-color: lightgray;
+    border-style: solid;
+    width: 100%;
+}
 
-#hamburgerBtn span:nth-child(1) {display: block; }
-#hamburgerBtn span:nth-child(2) {display: none; }
+/* In base, hide join section. */
+section#join {
+    display: none;
+}
 
-#hamburgerBtn.open span:nth-child(1) {display: none; }
-#hamburgerBtn.open span:nth-child(2) {display: block; }
+nav ul {
+    display: none;
+}
+nav ul.open {
+    display: block;
+}
+
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
 
 #current-date {
     margin: 1rem;
     background-color: var(--accent1-color);
     padding: 0.5rem;
+    width: 100%;
 }
 
 footer {
