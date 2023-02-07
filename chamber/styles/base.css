@@ -169,6 +169,7 @@ nav ul.open {
     display: grid;
     grid-template-columns: 30% auto;
     align-items: center;
+    margin: 0.5rem;
 }
 
 #hamburgerBtn span:nth-child(1) {

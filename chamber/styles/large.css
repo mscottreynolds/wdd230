@@ -15,10 +15,6 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    section {
-        display: grid;
-    }
-
     section#hero {
         grid-column: 2/4;
         grid-row: 1/3;
