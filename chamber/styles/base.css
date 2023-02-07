@@ -198,6 +198,10 @@ footer {
     padding: 0.8rem;
 }
 
+.banner {
+    font-size: 0.8rem;
+}
+
 .signature {
     font-family: var(--signature-font);
 }
