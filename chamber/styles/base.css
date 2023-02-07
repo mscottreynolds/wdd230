@@ -53,7 +53,7 @@ header {
 
 header img {
     width: 100%;
-    height:auto;
+    height: auto;
 }
 hr {
     margin: auto 0px;
@@ -142,7 +142,8 @@ nav a:hover {
     color: var(--nav-hover-color);
 }
 
-section {
+section,
+.section {
     /* display: flex; */
     padding: 0.5em;
     margin: 0.5em 0;
@@ -154,7 +155,7 @@ section {
 }
 
 /* In base, hide join section. */
-section#join {
+#join {
     display: none;
 }
 
