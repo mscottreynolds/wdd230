@@ -21,7 +21,7 @@
     <header>
         <span class="banner"></span>
         <div id="logo">
-            <img src="images/Legacy_Ranch_Logo.jpg" alt="Legacy Ranch Chamber of Commerce Logo" class="shadow">
+            <img src="images/Legacy_Ranch_Logo175.webp" alt="Legacy Ranch Chamber of Commerce Logo" class="shadow">
             <h1>Legacy Ranch Chamber of Commerce</h1>
         </div>
         <nav>
@@ -40,8 +40,11 @@
     <main>
         <section id="hero">
             <h2>Hero</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate itaque odio quos qui voluptatum
-                eligendi nostrum explicabo cum, facilis consequuntur tenetur nobis ipsam ut amet.</p>
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/wdd230-large.jpg">
+                <source media="(min-width: 500px)" srcset="images/wdd230-medium.jpg">
+                <img src="images/wdd230-small.jpg" alt="Hero Image">
+            </picture>
         </section>
         <section id="event">
             <h2>Event</h2>
@@ -50,7 +53,10 @@
         </section>
         <section id="weather">
             <h2>Weather</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <span id="temp"></span>
+            <hr>
+            Wind Speed: <span id="wind-speed"></span><br>
+            Wind Chill: <span id="wind-chill"></span>
         </section>
         <section id="news">
             <h2>News</h2>
@@ -77,7 +83,7 @@
         </section>
     </main>
     <footer>
-        <img src="images/Legacy_Ranch_Logo.jpg" alt="Legacy Ranch Chamber of Commerce Logo" class="logo">
+        <img alt="Legacy Ranch Chamber of Commerce Logo" src="images/Legacy_Ranch_Logo175.webp">
         <div id="footer-name">
             Legacy Ranch Chamber of Commerce<br>
             123 Legacy Ranch Blvd<br>
@@ -99,6 +105,7 @@
         Last modified: <span id="last-modified"></span>
     </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
 
 </body>
 
