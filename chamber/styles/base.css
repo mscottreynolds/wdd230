@@ -27,14 +27,13 @@ body {
     font-family: var(--paragraph-font);
 }
 
-/* header,
+header,
 main,
-nav,
 footer {
-    max-width: 720px;
+    max-width: 1024px;
     margin: 0 auto;
     align-items: center;
-} */
+}
 
 header,
 footer {
@@ -46,15 +45,21 @@ footer {
 header {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     font-size: 1rem;
     padding: 0.8rem;
 }
 
 header img {
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 70px;
 }
+
+footer img {
+    width: 100px;
+    height: 70px;
+}
+
 hr {
     margin: auto 0px;
     width: 100%;
@@ -66,27 +71,13 @@ h2 {
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
 h2 {
-    font-size: 1rem;
-}
-
-main p {
-    color: var(--paragraph-text-on-white);
-}
-/* 
-header img {
-    display: none; 
-} */
-
-main {
-    padding: 0.5em 0;
-    /* display: flex;
-    flex-direction: column; */
+    font-size: 0.9rem;
 }
 
 nav {
@@ -133,13 +124,40 @@ nav button {
     margin: 0.2rem 2vw;
     /* background: transparent; */
     /* border: none; */
-    font-size: 2rem;
+    font-size: 1.4rem;
     /* color: #555; */
+}
+
+nav .social-media {
+    float: right;
+    margin-right: 0.5rem;
+    font-size: 1.4rem;
 }
 
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
+}
+
+nav ul {
+    display: none;
+}
+nav ul.open {
+    display: block;
+}
+
+main p {
+    color: var(--paragraph-text-on-white);
+}
+/* 
+header img {
+    display: none; 
+} */
+
+main {
+    padding: 0.5em 0;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 section,
@@ -162,18 +180,11 @@ section,
     display: none;
 }
 
-nav ul {
-    display: none;
-}
-nav ul.open {
-    display: block;
-}
-
 #logo {
     display: grid;
     grid-template-columns: 30% auto;
     align-items: center;
-    margin: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 #hamburgerBtn span:nth-child(1) {
@@ -272,6 +283,3 @@ footer {
     height: 3em;
 }
 
-.social-media {
-    font-size: 1.5em;
-}

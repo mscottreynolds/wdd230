@@ -5,6 +5,7 @@
 
     nav ul {
         display: flex;
+        margin: auto;
     }
     nav ul li {
         flex: 1 1 auto;
