@@ -195,8 +195,7 @@ section,
     display: block;
 }
 
-#current-date {
-    /* margin: 1rem; */
+#message-bar {
     background-color: var(--accent1-color);
     padding: 0.5rem;
     width: 100%;
