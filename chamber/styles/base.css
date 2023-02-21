@@ -202,6 +202,16 @@ section,
     width: 100%;
 }
 
+#demographics {
+    margin-top: 8px;
+    margin-bottom: auto;
+}
+
+#scenery img {
+    width: 98%;
+}
+}
+
 footer {
     font-size: 0.8rem;
     padding: 0.8rem;

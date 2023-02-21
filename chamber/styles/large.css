@@ -13,7 +13,14 @@
 
     main {
         display: grid;
+    }
+
+    main#home {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    main#discover {
+        grid-template-columns: 1fr 1fr;
     }
 
     #hero {
