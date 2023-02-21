@@ -32,7 +32,7 @@ main,
 footer {
     max-width: 1024px;
     margin: 0 auto;
-    align-items: center;
+    /* align-items: center; */
 }
 
 header,
@@ -80,6 +80,11 @@ h2 {
     font-size: 0.9rem;
 }
 
+/* 
+header img {
+    display: none; 
+} */
+
 nav {
     background-color: var(--nav-background-color);
     margin: 0 auto;
@@ -93,10 +98,16 @@ nav button {
     background: transparent;
     border-width: 1px;
     border-color: white;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: white;
     /* color: #555; */
     float: left;
+}
+
+nav .social-media {
+    float: right;
+    margin-right: 0.5rem;
+    font-size: 1.5em;
 }
 
 nav ul {
@@ -120,20 +131,6 @@ nav ul li a {
     transition: 0.5s;
 }
 
-nav button {
-    margin: 0.2rem 2vw;
-    /* background: transparent; */
-    /* border: none; */
-    font-size: 1.4rem;
-    /* color: #555; */
-}
-
-nav .social-media {
-    float: right;
-    margin-right: 0.5rem;
-    font-size: 1.4rem;
-}
-
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
@@ -149,10 +146,6 @@ nav ul.open {
 main p {
     color: var(--paragraph-text-on-white);
 }
-/* 
-header img {
-    display: none; 
-} */
 
 main {
     padding: 0.5em 0;
@@ -184,6 +177,7 @@ section,
     display: grid;
     grid-template-columns: 30% auto;
     align-items: center;
+    /* margin: 0.5rem; */
     margin-bottom: 0.5rem;
 }
 
