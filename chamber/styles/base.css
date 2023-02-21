@@ -210,7 +210,6 @@ section,
 #scenery img {
     width: 98%;
 }
-}
 
 footer {
     font-size: 0.8rem;
@@ -230,12 +229,14 @@ footer {
     font-size: 1.5rem;
 }
 
-.shadow {
-    box-shadow: 0 0 30px var(--logo-box-shadow-color);
+.box {
     border-style: double;
     border-radius: 12px;
     border-width: 2px;
-    /* display: flex;          */
+}
+
+.shadow {
+    box-shadow: 0 0 30px var(--logo-box-shadow-color);
 }
 
 .active {
@@ -286,4 +287,3 @@ footer {
     width: 25%;
     height: 3em;
 }
-
