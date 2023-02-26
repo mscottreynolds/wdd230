@@ -58,9 +58,19 @@
         grid-column: 1/3;
         grid-row: 3/4;
     }
+
     #join {
         display: grid;
         grid-column: 1/3;
         grid-row: 4/5;
     }
+
+    #join-us, #thankyou {
+        padding: 0 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+    
+    
 }
