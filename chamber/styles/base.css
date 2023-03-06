@@ -212,13 +212,12 @@ section,
 
 main#join-us form fieldset {
     margin: 1rem 0;
-    border: 1px solid #445ba9;
+    border: 1px solid;
     border-radius: 10px;
     padding: .5rem 2%;
 }
 
 main#join-us form legend {
-    color: #445ba9;
     margin: 0 1rem;
     padding: 0 .5rem;
 }
