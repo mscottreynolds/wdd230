@@ -71,6 +71,16 @@
         grid-template-columns: 1fr;
         margin: 0 auto;
     }
+
+    main#join-us fieldset#business-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    main#join-us fieldset#business-info div {
+        margin: 0.5rem;
+    }
+    
+    
     
     
 }

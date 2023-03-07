@@ -63,27 +63,44 @@
                         <input type="tel" name="cellphone" required>
                     </label>
                 </fieldset>
-                <fieldset>
+                <fieldset id="business-info">
                     <legend>Business Information</legend>
-                    <label class="top">Business Name*
-                        <input type="text" name="business-name" required>
-                    </label>
-                    <label class="top">Membership Level
-                        <select name="membership-level">
-                            <option value="">Please Select &#9662;</option>
-                            <option value="np">NP Membership</option>
-                            <option value="bronze">Bronze Membership</option>
-                            <option value="silver">Silver Membership</option>
-                            <option value="gold">Gold Membership</option>
-                        </select>
-                    </label>
+                    <div>
+                        <label class="top">Business Name*
+                            <input type="text" name="business-name" required>
+                        </label>
+                        <label class="top">Membership Level
+                            <select name="membership-level">
+                                <option value="">Please Select &#9662;</option>
+                                <option value="np">NP Membership</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
 
-                    <label class="top">Business Description
-                        <textarea name="business-description"></textarea>
-                    </label>
-                    <input type="hidden" name="date-time" id="date-time" value="">
+                        <label class="top">Business Description
+                            <textarea name="business-description"></textarea>
+                        </label>
+                        <input type="hidden" name="date-time" id="date-time" value="">
+                    </div>
+                    <div>
+                        <h3>Membership Levels</h3>
+                        <ol>
+                            <li>NP Membership is for non profit organizations and there is no fee.</li>
+                            <li>
+                                Bronze Membership.</li>
+                            <li>Silver Membership</li>
+                            <li>Gold Membership</li>
+                        </ol>
+                        <p>
+                            These memberships have increasing costs as well as increased benefits per level like
+                            trainings, advertising, event discounts, etc.
+                        </p>
+                    </div>
+
                 </fieldset>
-                <input type="submit" value="Join" class="submit" >
+                <input type="submit" value="Join" class="submit">
             </form>
         </section>
 
