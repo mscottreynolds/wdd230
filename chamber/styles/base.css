@@ -136,6 +136,16 @@ nav a:hover {
     color: var(--nav-hover-color);
 }
 
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-color);
+}
+
 nav ul {
     display: none;
 }
