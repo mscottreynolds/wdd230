@@ -42,7 +42,7 @@ function displayResults(weatherData) {
     let currentWindChill = "N/A";
 
     if (currentTemp <= 50 && currentWindSpeed > 3) {
-        currentWindChill = calculateWindChill(currentTemp, currentWindSpeed);
+        currentWindChill = `${calculateWindChill(currentTemp, currentWindSpeed)}°F`;
     }
 
     conditionsHTML = "";
@@ -57,7 +57,7 @@ function displayResults(weatherData) {
     ePressure.innerHTML = `${currentPressure}hPa`;
     eConditions.innerHTML = conditionsHTML;
     eWindSpeed.innerHTML = `${currentWindSpeed}mph`;
-    eWindChill.innerHTML = `${currentWindChill}°F`;
+    eWindChill.innerHTML = `${currentWindChill}`;
     eHumidity.innerHTML = `${currentHumidity}%`;
 }
 
