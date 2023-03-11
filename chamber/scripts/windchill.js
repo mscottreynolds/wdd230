@@ -50,7 +50,7 @@ function displayResults(weatherData) {
         const currentIcon = `https://openweathermap.org/img/w/${currentCondition.icon}.png`;
         const currentDesc = toTitleCase(currentCondition.description);
 
-        conditionsHTML += `<img src="${currentIcon}" alt="${currentDesc}" loading="lazy" height="50"> ${currentDesc}<br>`;
+        conditionsHTML += `<img src="${currentIcon}" alt="Image for current weather" loading="lazy" height="50"> ${currentDesc}<br>`;
     });
 
     eTemperature.innerHTML = `${currentTemp}°F`;
