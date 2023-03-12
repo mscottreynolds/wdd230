@@ -1,21 +1,34 @@
 const url = "data/data.json";
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("div.cards");
+
+gridbutton.addEventListener("click", () => {
+    // example using arrow function
+    display.classList.add("grid");
+    display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+    display.classList.add("list");
+    display.classList.remove("grid");
+}
 
 const membershipToText = (level) => {
     let membership = "n/a";
     if (level == "np") {
         membership = "Non Profit Organization";
-    }
-    else if (level == "bronze") {
+    } else if (level == "bronze") {
         membership = "Bronze";
-    }
-    else if (level == "silver") {
+    } else if (level == "silver") {
         membership = "Silver";
-    }
-    else if (level == "gold") {
+    } else if (level == "gold") {
         membership = "Gold";
     }
     return membership;
-}
+};
 
 const displayDirectory = (directory) => {
     console.log(directory);
@@ -36,7 +49,7 @@ const displayDirectory = (directory) => {
             const address = document.createElement("li");
             const cityStateZip = document.createElement("li");
             const phone = document.createElement("li");
-            const url = document.createElement("li");
+            // const url = document.createElement("");
             const href = document.createElement("a");
             const membershipLevel = document.createElement("li");
 
@@ -54,27 +67,34 @@ const displayDirectory = (directory) => {
             name.textContent = `${entry.name}`;
             description.textContent = `${entry.description}`;
             picture.setAttribute("src", entry.imageurl);
-            picture.setAttribute("alt", name.description);
+            picture.setAttribute("alt", entry.description);
             picture.setAttribute("loading", "lazy");
             picture.setAttribute("width", "200");
             address.textContent = `${entry.address}`;
             cityStateZip.textContent = `${entry.city}, ${entry.state}  ${entry.zip}`;
             phone.textContent = `${entry.phone}`;
-            membershipLevel.textContent = `${membershipToText(entry.membershipLevel)}`;
+            membershipLevel.textContent = `${membershipToText(
+                entry.membershipLevel
+            )}`;
+
             href.setAttribute("href", entry.url);
             href.textContent = `${entry.url}`;
             href.setAttribute("target", "_blank");
-            url.appendChild(href);
+            // url.appendChild(href);
+
+            // infoList.appendChild(description);
+            infoList.appendChild(address);
+            infoList.appendChild(cityStateZip);
+            infoList.appendChild(phone);
+            // infoList.appendChild(membershipLevel);
+            // infoList.appendChild(url);
 
             // Append the section(card) with the created elements
             card.appendChild(picture);
-            card.appendChild(name);
             card.appendChild(description);
-            card.appendChild(address);
-            card.appendChild(cityStateZip);
-            card.appendChild(phone);
-            card.appendChild(membershipLevel);
-            card.appendChild(url);
+            card.appendChild(name);
+            card.appendChild(infoList);
+            card.appendChild(href);
 
             cards.appendChild(card);
         } // end of forEach loop
