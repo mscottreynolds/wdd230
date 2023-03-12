@@ -1,18 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
-  font-size: 16px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    text-align: center;
 }
 
 div.cards {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
 }
 
 div.cards section {
-    margin: 2rem;
-    max-width: 450px;
-    padding: 2rem;
+    margin: 1rem;
+    max-width: 300px;
+    padding: 1rem;
     display: block;
     /* flex-direction: column; */
     align-items: center;
@@ -21,12 +28,19 @@ div.cards section {
     background-color: #eee;
 }
 
+div.cards img {
+    width: auto;
+    max-width: 200px;
+    box-shadow: 0 0 30px #777;
+    height: 200px;
+    border: 1px solid #333;
+}
+
 div.cards p {
-    margin: 0.75rem;
+    margin: 0.25rem;
 }
 
 div.cards h2 {
     color: blue;
-    margin: 0.75rem;
-
+    margin: 0.25rem;
 }

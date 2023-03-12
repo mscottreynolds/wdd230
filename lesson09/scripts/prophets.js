@@ -30,8 +30,8 @@ const displayProphets = (prophets) => {
                 `Portait of ${prophet.name} ${prophet.lastname}`
             );
             portrait.setAttribute("loading", "lazy");
-            portrait.setAttribute("width", "340");
-            portrait.setAttribute("height", "440");
+            // portrait.setAttribute("width", "324");
+            portrait.setAttribute("height", "200");
 
             // Append the section(card) with the created elements
             card.appendChild(h2);
