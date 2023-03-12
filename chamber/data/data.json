@@ -1,0 +1,112 @@
+{
+    "directory": [
+        {
+            "name": "Worship Services",
+            "address": "124 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6790",
+            "url": "https://worship.legacyranch.group",
+            "imageurl": "images/worship.webp",
+            "membershipLevel": "np",
+            "description": "Come worship with us."
+        },
+        {
+            "name": "Lauren's Pet Sitting",
+            "address": "126 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6791",
+            "url": "https://pet.legacyranch.group",
+            "imageurl": "images/pets.webp",
+            "membershipLevel": "bronze",
+            "description": "Lauren's pet sitting services."
+        },
+        {
+            "name": "Carpentry Services",
+            "address": "128 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6792",
+            "url": "https://carpentry.legacyranch.group",
+            "imageurl": "images/carpentry.webp",
+            "membershipLevel": "silver",
+            "description": "Our carpentry services."
+        },
+        {
+            "name": "Snow Removal",
+            "address": "130 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6793",
+            "url": "https://snow.legacyranch.group",
+            "imageurl": "images/snow.webp",
+            "membershipLevel": "gold",
+            "description": "When you need the snow removed."
+        },
+        {
+            "name": "Farrier Services",
+            "address": "132 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6794",
+            "url": "https://farrier.legacyranch.group",
+            "imageurl": "images/farrier.webp",
+            "membershipLevel": "silver",
+            "description": "Taking care of your horse."
+        },
+        {
+            "name": "Lawn Maintenance",
+            "address": "125 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6795",
+            "url": "https://lawn.legacyranch.group",
+            "imageurl": "images/lawn.webp",
+            "membershipLevel": "bronze",
+            "description": "Getting rid of the dandelions."
+        },
+        {
+            "name": "Plumbing Services",
+            "address": "127 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6796",
+            "url": "https://plumbing.legacyranch.group",
+            "imageurl": "images/plumbing.webp",
+            "membershipLevel": "silver",
+            "description": "For when those pipes freeze."
+        },
+        {
+            "name": "Schooling Services",
+            "address": "129 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6797",
+            "url": "https://school.legacyranch.group",
+            "imageurl": "images/school.webp",
+            "membershipLevel": "gold",
+            "description": "Read, writing, and arithmatic."
+        },
+        {
+            "name": "Grocery Services",
+            "address": "131 Legacy Ranch Ln.",
+            "city": "Legacy Ranch",
+            "state": "UT",
+            "zip": "84000",
+            "phone": "234-555-6798",
+            "url": "https://food.legacyranch.group",
+            "imageurl": "images/grocery.webp",
+            "membershipLevel": "silver",
+            "description": "Basic daily foods and supplies."
+        }
+    ]
+}
