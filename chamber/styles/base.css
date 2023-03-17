@@ -312,9 +312,9 @@ main#directory .cards img {
     margin: 0.5rem;
     width: auto;
     max-width: 200px;
-    box-shadow: 0 0 30px #777;
     height: 200px;
-    border: 1px solid #333;
+    box-shadow: 0 0 30px #777;
+    border: 1px solid #333;    
 }
 
 main#directory div.cards h3 {
@@ -447,6 +447,12 @@ footer {
 .shadow {
     box-shadow: 0 0 30px var(--logo-box-shadow-color);
 }
+
+.box-shadow {
+    box-shadow: 0 0 30px #777;
+    border: 1px solid #333;    
+}
+
 
 .active {
     color: var(--nav-active-link-color);
