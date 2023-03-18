@@ -455,6 +455,10 @@ main#contact form label textarea {
     max-width: 40rem;
 }
 
+main#contact img {
+    border: solid 1px;
+}
+
 form label.top input:required {
     border-left: red solid 6px;
 }
