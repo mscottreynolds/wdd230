@@ -1,6 +1,6 @@
 // Display weather.
 const eTemperature = document.querySelector("#temperature");
-const ePressure = document.querySelector("#pressure");
+// const ePressure = document.querySelector("#pressure");
 const eConditions = document.querySelector("#conditions");
 const eWindSpeed = document.querySelector("#wind-speed");
 const eWindChill = document.querySelector("#wind-chill");
@@ -54,7 +54,7 @@ function displayResults(weatherData) {
     });
 
     eTemperature.innerHTML = `${currentTemp}°F`;
-    ePressure.innerHTML = `${currentPressure}hPa`;
+    // ePressure.innerHTML = `${currentPressure}hPa`;
     eConditions.innerHTML = conditionsHTML;
     eWindSpeed.innerHTML = `${currentWindSpeed}mph`;
     eWindChill.innerHTML = `${currentWindChill}`;
