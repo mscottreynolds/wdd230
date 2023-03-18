@@ -282,6 +282,11 @@ section {
     margin: 0;
 }
 
+.cards ul {
+    padding: 0rem;
+    font-size: 0.95rem;
+}
+
 #spotlight .cards li {
     display: block;
     text-decoration: none;
