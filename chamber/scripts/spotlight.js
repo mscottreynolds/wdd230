@@ -29,7 +29,7 @@ const displaySpotlight = (directory) => {
         .filter((item) => {
             return (item.membershipLevel == "silver" || item.membershipLevel == "gold");
         });
-    console.log(`filtered = ${filtered}`);
+    // console.log(`filtered = ${filtered}`);
     // console.table(filtered);
     filtered.forEach(
             (entry) => {
@@ -37,7 +37,7 @@ const displaySpotlight = (directory) => {
                 if (random && spotlightCount < 2) {
                     // Display two random records to spotlight.
                     spotlightCount += 1;
-                    console.log(entry);
+                    // console.log(entry);
                     // Create elements to add to the div.cards element
                     const card = document.createElement("section");
                     const name = document.createElement("h3");
@@ -45,8 +45,8 @@ const displaySpotlight = (directory) => {
                     const picture = document.createElement("img");
                     picture.setAttribute("class", "box-shadow");
                     const infoList = document.createElement("ul");
-                    // const address = document.createElement("li");
-                    // const cityStateZip = document.createElement("li");
+                    const address = document.createElement("li");
+                    const cityStateZip = document.createElement("li");
                     const phone = document.createElement("li");
                     const href = document.createElement("a");
                     // const membershipLevel = document.createElement("li");
@@ -68,21 +68,21 @@ const displaySpotlight = (directory) => {
                     picture.setAttribute("alt", entry.description);
                     picture.setAttribute("loading", "lazy");
                     picture.setAttribute("width", "100");
-                    // address.textContent = `${entry.address}`;
-                    // cityStateZip.textContent = `${entry.city}, ${entry.state}  ${entry.zip}`;
+                    address.textContent = `${entry.address}`;
+                    cityStateZip.textContent = `${entry.city}, ${entry.state}  ${entry.zip}`;
                     phone.textContent = `${entry.phone}`;
                     // membershipLevel.textContent = `${membershipToText(
                     //     entry.membershipLevel
                     // )}`;
 
                     href.setAttribute("href", entry.url);
-                    href.textContent = `${entry.url}`;
+                    href.textContent = `Website`;
                     href.setAttribute("target", "_blank");
                     // url.appendChild(href);
 
                     // infoList.appendChild(description);
-                    // infoList.appendChild(address);
-                    // infoList.appendChild(cityStateZip);
+                    infoList.appendChild(address);
+                    infoList.appendChild(cityStateZip);
                     infoList.appendChild(phone);
                     // infoList.appendChild(membershipLevel);
                     // infoList.appendChild(url);
@@ -92,6 +92,8 @@ const displaySpotlight = (directory) => {
                     card.appendChild(picture);
                     card.appendChild(description);
                     card.appendChild(infoList);
+                    // card.appendChild(address);
+                    // card.appendChild(cityStateZip);
                     card.appendChild(href);
 
                     cards.appendChild(card);

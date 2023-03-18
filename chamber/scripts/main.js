@@ -16,7 +16,7 @@ const last_modified = document.querySelector("#last-modified");
 last_modified.innerHTML = `${document.lastModified}`;
 
 const toggleMenu = function () {
-    console.log("It worked!");
+    // console.log("It worked!");
     document.querySelector("#primaryNav").classList.toggle("open");
     document.querySelector("#hamburgerBtn").classList.toggle("open");
 };

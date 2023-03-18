@@ -31,15 +31,15 @@ const membershipToText = (level) => {
 };
 
 const displayDirectory = (directory) => {
-    console.log(directory);
-    console.log("table follows:");
-    console.table(directory); // note that we reference the prophet array of the data object given the structure of the json file
+    // console.log(directory);
+    // console.log("table follows:");
+    // console.table(directory); // note that we reference the prophet array of the data object given the structure of the json file
 
     const cards = document.querySelector("div.cards"); // select the output container element
 
     directory.forEach(
         (entry) => {
-            console.log(entry);
+            // console.log(entry);
             // Create elements to add to the div.cards element
             const card = document.createElement("section");
             const name = document.createElement("h3");
@@ -78,7 +78,7 @@ const displayDirectory = (directory) => {
             )}`;
 
             href.setAttribute("href", entry.url);
-            href.textContent = `${entry.url}`;
+            href.textContent = `Website`;
             href.setAttribute("target", "_blank");
             // url.appendChild(href);
 
