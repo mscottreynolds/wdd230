@@ -36,9 +36,9 @@
         margin: 0 auto;
     }
 
-    section {
+    /* section {
         margin: 0.5rem;
-    }
+    } */
 
     .hover:hover {
         box-shadow: 0 0 50px #333;

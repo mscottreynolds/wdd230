@@ -42,6 +42,7 @@ const displayDirectory = (directory) => {
             // console.log(entry);
             // Create elements to add to the div.cards element
             const card = document.createElement("section");
+            card.setAttribute("class", "card");
             const name = document.createElement("h3");
             const description = document.createElement("p");
             const picture = document.createElement("img");
