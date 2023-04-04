@@ -1,0 +1,189 @@
+:root {
+    --accent1-color: #386641;
+    --accent2-color: #6a994e;
+    --accent3-color: #a7c957;
+    --accent4-color: #f2e8cf;
+    --accent5-color: #bc4749;
+
+    --border1-color: black;
+    --border2-color: var(--accent5-color);
+
+    --text-on-light-color: #000000;
+    --text-on-dark-color: #ffffff;
+
+    --background-color: var(--accent4-color);
+
+    --header-background-color: var(--accent1-color);
+    --header-text-color: var(--text-on-dark-color);
+
+    --main-background-color: var(--accent4-color);
+    --main-text-color: var(--text-on-dark-color);
+
+    --footer-background-color: var(--accent1-color);
+    --footer-text-color: var(--text-on-dark-color);
+
+    --nav-backgrond-color: var(--accent2-color);
+    --nav-text-color: var(--text-on-light-color);
+    --nav-link-color: var(--text-on-light-color);
+    --nav-hover-color: var(--text-on-light-color);
+    --nav-hover-background-color: var(--text-on-dark-color);
+
+    --nav-active-link-color: var(--accent3-color);
+    --nav-box-shadow-color: rgba(0, 0, 0, 0.9);
+
+    --heading-font: "Noto Serif", Times, serif;
+    --paragraph-font: "Noto Sans", Helvetica, sans-serif;
+    --footer-font: "Noto Serif", cursive;
+
+    /* font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Serif', serif; */
+
+    --paragraph-text-on-white: var(--text-on-light-color);
+    --paragraph-text-on-color: var(--text-on-dark-color);
+
+    --logo-box-shadow-color: var(--accent1-color);
+    --box-shadow-color: var(--accent1-color);
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 0.5rem;
+    font-family: var(--paragraph-font);
+}
+
+header,
+main,
+footer {
+    margin: 0 auto;
+    align-items: center;
+}
+
+header,
+footer {
+    text-align: center;
+    border: 1px solid var(--border1-color);
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
+    align-items: center;
+}
+
+nav {
+    background-color: var(--nav-backgrond-color);
+    color: var(--nav-text-color);
+    border: 1px solid var(--border1-color);
+    /* margin: 1rem; */
+    /* grid-row: 2/3; */
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--nav-link-color);
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-color);
+}
+
+section {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+footer {
+    font-family: var(--footer-font);
+    font-size: 0.8rem;
+}
+
+#container-openweathermap-widget-15 {
+    width: 100%;
+}
+
+
+
+#weather .w-icon,
+#weather .weather-right__icon  {
+    width: auto;
+    height: auto;
+}
+
+.hr-short {
+    width: 50%;
+
+}
+
+.card {
+    background-color: var(--background-color);
+    /* border: 2px solid var(--border2-color); */
+    padding: 1rem;
+}
+
+.card img {
+    width: 98%;
+    max-width: 200px;
+}
+
+.logo {
+    box-shadow: 0 0 30px var(--logo-box-shadow-color);
+    width: auto;
+    padding: 0;
+}
+
+.logo-medium {
+    width: 98%;
+    max-width: 160px;
+}
+
+.logo-small {
+    width: 98%;
+    max-width: 80px;
+}
+
+.hero {
+    width: 98%;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,30 @@
+@media only screen and (min-width: 32.5em) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header,
+    footer {
+        border-radius: 1rem;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        grid-column: 1/4;
+        width: 95%;
+    }
+
+    nav {
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+
+    .card {
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+
+    .card img {
+        max-width: 400px;
+    }
+}
