@@ -35,9 +35,6 @@
     --paragraph-font: "Noto Sans", Helvetica, sans-serif;
     --footer-font: "Noto Serif", cursive;
 
-    /* font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Serif', serif; */
-
     --paragraph-text-on-white: var(--text-on-light-color);
     --paragraph-text-on-color: var(--text-on-dark-color);
 
@@ -91,6 +88,12 @@ nav ul {
     padding: 0;
 }
 
+a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
 nav ul li a {
     display: block;
     color: var(--nav-link-color);
@@ -101,6 +104,7 @@ nav ul li a {
     transition: 0.5s;
 }
 
+a:hover,
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-color);
@@ -121,7 +125,6 @@ h1 {
     padding-right: 0.5rem;
 }
 
-
 h2 {
     font-size: 1.5rem;
 }
@@ -130,32 +133,86 @@ h3 {
     font-size: 1rem;
 }
 
-footer {
-    font-family: var(--footer-font);
-    font-size: 0.8rem;
+p {
+    padding: 0.5rem;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    font-family: var(--footer-font);
+    font-size: 0.8rem;
+    padding: .25rem;
+}
+
+/* Tweek the widget so it fits. */
 #container-openweathermap-widget-15 {
     width: 100%;
 }
 
+#container-openweathermap-widget-11 .widget-left {
+    background-color: var(--background-color);
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+}
 
+#container-openweathermap-widget-11 .widget-left__body {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+}
 
+#container-openweathermap-widget-11 #graphic2 {
+    display: none;
+}
+
+#container-openweathermap-widget-11 .widget-left-menu__header {
+    padding-left: 0.25rem;
+}
+
+#container-openweathermap-widget-11 .widget-left__calendar {
+    margin: 0 4px 0 4px;
+}
+
+#container-openweathermap-widget-11 .calendar__item {
+    font-size: 13px;
+}
+
+#container-openweathermap-widget-11 .widget-left-menu__layout,
+#container-openweathermap-widget-11 .widget-left__graphic,
+#container-openweathermap-widget-11 .calendar {
+    width: 100%;
+}
 #weather .w-icon,
-#weather .weather-right__icon  {
+#weather .weather-right__icon {
     width: auto;
     height: auto;
 }
 
 .hr-short {
     width: 50%;
+}
 
+.button {
+    background-color: var(--nav-backgrond-color);
+    color: var(--nav-text-color);
+    border: 1px solid var(--border1-color);
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .card {
     background-color: var(--background-color);
     /* border: 2px solid var(--border2-color); */
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .card img {
@@ -186,4 +243,24 @@ footer {
 .footer-social-media {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* gap: 0.5rem; */
+    /* padding: 1rem; */
+    /* width: 100%; */
+}
+
+.footer-info {
+    padding: 0.5rem;
+}
+
+.button-small,
+.sm-icon {
+    background-color: var(--nav-backgrond-color);
+    color: var(--nav-text-color);
+    border: 1px solid var(--border1-color);
+    border-radius: 1rem;
+    margin: 0.25rem 0;
+    padding: 0.25rem 1rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }

@@ -89,42 +89,40 @@ function displayResults(weatherData) {
 // Weather API provided by OpenWeather (TM), under Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0) https://creativecommons.org/licenses/by-sa/4.0/.
 // Data and database are open and licensed by Open Data Commons Open Database License (ODbL) https://opendatacommons.org/licenses/odbl/.
 async function apiFetchWeather(cityID, specialValue) {
-    try {
-        const url = `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=imperial&appid=${specialValue}`;
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            console.table(data); // Uncomment this for testing the call
-            displayResults(data);
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error);
+    const url = `https://api.openweathermap.org/data/2.5/weather?id=${cityID}&units=imperial&appid=${specialValue}`;
+    const response = await fetch(url);
+    if (response.ok) {
+        const data = await response.json();
+        // console.table(data); // Uncomment this for testing the call
+        displayResults(data);
+    } else {
+        throw Error(await response.text());
     }
 }
 
 // Weather for Legacy Ranch Valley is the same as Herriman, UT  USA.
 const carlsbadID = "5334223";
 const herrimanID = "5775782";
-//apiFetchWeather(carlsbadID, importantValueThatBelongsToMe);
-//apiFetchForcast(herrimanID, importantValueThatBelongsToMe);
+apiFetchWeather(carlsbadID, importantValueThatBelongsToMe);
 
-// Following code was supplied by OpenWeatherMap.org.
-window.myWidgetParam ? window.myWidgetParam : (window.myWidgetParam = []);
-window.myWidgetParam.push({
-    id: 22,
-    cityid: "5334223",
-    appid: "1eac79489b024d011d9f9333a77ad7d3",
-    units: "imperial",
-    containerid: "openweathermap-widget-22",
-});
-(function () {
-    var script = document.createElement("script");
-    script.async = true;
-    script.charset = "utf-8";
-    script.src =
-        "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(script, s);
-})();
+// Use OpenWeatherMap.org for forcast widget.
+if (document.querySelector("#openweathermap-widget-11")) {
+    // Following code was supplied by OpenWeatherMap.org.
+    window.myWidgetParam ? window.myWidgetParam : (window.myWidgetParam = []);
+    window.myWidgetParam.push({
+        id: 11,
+        cityid: carlsbadID,
+        appid: importantValueThatBelongsToMe,
+        units: "imperial",
+        containerid: "openweathermap-widget-11",
+    });
+    (function () {
+        var script = document.createElement("script");
+        script.async = true;
+        script.charset = "utf-8";
+        script.src =
+            "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(script, s);
+    })();
+}
