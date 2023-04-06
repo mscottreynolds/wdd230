@@ -12,7 +12,7 @@ if (current_date) {
 const copyright_year = document.querySelector("#copyright-year");
 if (copyright_year) {
     const year = now.getFullYear();
-    copyright_year.innerHTML = `${year}`;    
+    copyright_year.innerHTML = `${year}`;
 }
 
 // Set the last modified date.
@@ -31,3 +31,15 @@ if (hamburgerBtn) {
     hamburgerBtn.onclick = toggleMenu;
 }
 
+/* Update number of drinks ordered card.5 */
+(function () {
+    const numberOfDrinksOrdered = document.querySelector(
+        "#total-drinks-ordered"
+    );
+    if (numberOfDrinksOrdered) {
+        let currentNumber = Number(
+            window.localStorage.getItem("number-drinks-ordered")
+        );
+        numberOfDrinksOrdered.textContent = `Total number of drinks ordered: ${currentNumber}`;
+    }
+})();

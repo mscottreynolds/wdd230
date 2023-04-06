@@ -1,22 +1,44 @@
 const url = "./data/fruits.json";
 const orderDrinkButton = document.getElementById("order-drink");
 
-var fruitData = {};
+const buildFruitData = (data) => {
+    const fruitData = [];
+    data.forEach((entry) => {
+        // Build the records of Fruit data
+
+        // {
+        //     "genus": "Malus",
+        //     "name": "Apple",
+        //     "id": 6,
+        //     "family": "Rosaceae",
+        //     "order": "Rosales",
+        //     "nutritions": {
+        //       "carbohydrates": 11.4,
+        //       "protein": 0.3,
+        //       "fat": 0.4,
+        //       "calories": 52,
+        //       "sugar": 10.3
+        //     }
+        //   },
+        fruitData[entry.id] = entry;
+    });
+    return fruitData;
+};
 
 const populateSummary = (fruitData) => {
     const summarySection = document.getElementById("summary");
     if (summarySection) {
-        // Read the URL Search parameters and populate Summary section.
-        const urlParams = new URLSearchParams(window.location.search);
-        const contactName = urlParams.get("contact-name");
-        const contactEmail = urlParams.get("contact-email");
-        const contactPhone = urlParams.get("contact-phone");
-        const fruit1 = urlParams.get("fruit1");
-        const fruit2 = urlParams.get("fruit2");
-        const fruit3 = urlParams.get("fruit3");
-        const specialInstructions = urlParams.get("special-instructions");
+        const contactName = document.getElementById("contact-name");
+        const contactEmail = document.getElementById("contact-email");
+        const contactPhone = document.getElementById("contact-phone");
+        const fruit1 = document.getElementById("fruit1");
+        const fruit2 = document.getElementById("fruit2");
+        const fruit3 = document.getElementById("fruit3");
+        const specialInstructions = document.getElementById(
+            "special-instructions"
+        );
 
-        if (contactName && contactEmail) {
+        if (contactName.value && contactEmail.value) {
             let carbohydrates = 0.0;
             let protein = 0.0;
             let fat = 0.0;
@@ -25,45 +47,45 @@ const populateSummary = (fruitData) => {
 
             const listElement = document.createElement("ul");
             const itemName = document.createElement("li");
-            itemName.innerText = `Contact Name: ${contactName}`;
+            itemName.innerText = `Contact Name: ${contactName.value}`;
             listElement.appendChild(itemName);
 
             const itemEmail = document.createElement("li");
-            itemEmail.innerText = `Contact Email: ${contactEmail}`;
+            itemEmail.innerText = `Contact Email: ${contactEmail.value}`;
             listElement.appendChild(itemEmail);
 
-            if (contactPhone) {
+            if (contactPhone.value) {
                 const itemPhone = document.createElement("li");
                 itemPhone.innerText = `Contact Phone: ${contactPhone}`;
                 listElement.appendChild(itemPhone);
             }
-            if (fruit1) {
-                const selectedFruit = fruitData[fruit1];
+            if (fruit1.value) {
+                const selectedFruit = fruitData[fruit1.value];
                 carbohydrates += selectedFruit.nutritions.carbohydrates;
                 protein += selectedFruit.nutritions.protein;
                 fat += selectedFruit.nutritions.fat;
                 sugar += selectedFruit.nutritions.sugar;
                 calories += selectedFruit.nutritions.calories;
             }
-            if (fruit2) {
-                const selectedFruit = fruitData[fruit2];
+            if (fruit2.value) {
+                const selectedFruit = fruitData[fruit2.value];
                 carbohydrates += selectedFruit.nutritions.carbohydrates;
                 protein += selectedFruit.nutritions.protein;
                 fat += selectedFruit.nutritions.fat;
                 sugar += selectedFruit.nutritions.sugar;
                 calories += selectedFruit.nutritions.calories;
             }
-            if (fruit3) {
-                const selectedFruit = fruitData[fruit3];
+            if (fruit3.value) {
+                const selectedFruit = fruitData[fruit3.value];
                 carbohydrates += selectedFruit.nutritions.carbohydrates;
                 protein += selectedFruit.nutritions.protein;
                 fat += selectedFruit.nutritions.fat;
                 sugar += selectedFruit.nutritions.sugar;
                 calories += selectedFruit.nutritions.calories;
             }
-            if (specialInstructions) {
+            if (specialInstructions.value) {
                 const itemSpecialInstructions = document.createElement("li");
-                itemSpecialInstructions.innerText = `Special Instructions: ${specialInstructions}`;
+                itemSpecialInstructions.innerText = `Special Instructions: ${specialInstructions.value}`;
                 listElement.appendChild(itemSpecialInstructions);
             }
 
@@ -84,25 +106,36 @@ const populateSummary = (fruitData) => {
             itemCalories.innerText = `Calories: ${calories}`;
             listElement.appendChild(itemCalories);
 
+            // Update the total number of drinks ordered.
+            let currentNumber = Number(
+                window.localStorage.getItem("number-drinks-ordered")
+            );
+            currentNumber += 1;
+            localStorage.setItem("number-drinks-ordered", currentNumber);
+            let numberOfDrinksOrdered = `Total number of drinks ordered: ${currentNumber}`;
+
+            // store the new number of visits value
+            localStorage.setItem("number-drinks-ordered", currentNumber);
+
             summarySection.appendChild(listElement);
 
             const paragraph = document.createElement("p");
             paragraph.innerText = `Thank you for your order. You will be contacted when it is ready.`;
             summarySection.appendChild(paragraph);
+
+            const paragraphDrinksOrdered = document.createElement("p");
+            paragraphDrinksOrdered.innerText = numberOfDrinksOrdered;
+            summarySection.appendChild(paragraphDrinksOrdered);
+            
         }
     }
 };
 
-if (orderDrinkButton) {
-    orderDrinkButton.addEventListener("click", populateSummary);
-}
-
 const populateFruitsForm = (data) => {
-
     const selectFruit1 = document.getElementById("fruit1");
     const selectFruit2 = document.getElementById("fruit2");
     const selectFruit3 = document.getElementById("fruit3");
-
+    const fruitData = [];
 
     data.forEach(
         (entry) => {
@@ -141,10 +174,6 @@ const populateFruitsForm = (data) => {
             selectFruit3.appendChild(fruit3);
         } // end of forEach loop
     );
-
-    // Now populate the summary if anything was submitted on the URL.
-
-    populateSummary(fruitData);
 }; // end of function expression
 
 async function loadFruitData() {
@@ -154,5 +183,15 @@ async function loadFruitData() {
     populateFruitsForm(data);
 }
 
+async function loadSummaryData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    const fruitData = buildFruitData(data);
+    populateSummary(fruitData);
+}
+
 loadFruitData();
 
+if (orderDrinkButton) {
+    orderDrinkButton.addEventListener("click", loadSummaryData);
+}
