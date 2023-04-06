@@ -11,6 +11,12 @@
     --text-on-light-color: #000000;
     --text-on-dark-color: #ffffff;
 
+    --form-fieldset-background-color: var(--accent4-color);
+    --form-fieldset-text-color: var(--text-on-light-color);
+
+    --form-label-text-color: var(--text-on-light-color);
+    --form-label-background-color: var(--accent4-color);
+
     --background-color: var(--accent4-color);
 
     --header-background-color: var(--accent1-color);
@@ -50,7 +56,7 @@ body {
 }
 
 header,
-main,
+#fruits,
 footer {
     margin: 0 auto;
     align-items: center;
@@ -146,7 +152,50 @@ footer {
     padding: 0.25rem;
 }
 
-/* Tweek the widget so it fits. */
+form fieldset {
+    background-color: var(--form-fieldset-background-color);
+    color: var(--form-fieldset-text-color);
+    margin: 1rem 0;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0.5rem 2%;
+}
+
+form legend {
+    margin: 0 1rem;
+    padding: 0 0.5rem;
+}
+
+form label,
+form div {
+    background-color: var(--form-label-background-color);
+    color: var(--form-label-text-color);
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+form label input,
+form label select {
+    display: block;
+    font-size: .9rem;
+    border: solid 1px var(--border1-color);
+    border-radius: 2px;
+    padding: 0.5rem;
+    width: 96%;
+    max-width: 40rem;
+}
+form label textarea {
+    display: block;
+    border: solid 1px var(--border1-color);
+    border-radius: 2px;
+    padding: 0.5rem;
+    width: 96%;
+    max-width: 40rem;
+}
+
+/* Tweek the widget from OpenWeatherMap so it fits. */
+
 #container-openweathermap-widget-15 {
     width: 100%;
 }
@@ -166,15 +215,6 @@ footer {
     height: auto;
     padding-bottom: 0;
 }
-
-
-/* 
-Keep this for reference.
-#container-openweathermap-widget-11 .weather-left-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-} */
 
 #container-openweathermap-widget-11 #graphic2 {
     display: none;
@@ -201,6 +241,15 @@ Keep this for reference.
 #weather .weather-right__icon {
     width: auto;
     height: auto;
+}
+
+#fruits-page #summary ul {
+        list-style-type: none;
+        padding-left: 1rem;
+    
+}
+#fruits-page #summary ul li {
+    font-size: 0.9rem;
 }
 
 .hr-short {
@@ -253,9 +302,6 @@ Keep this for reference.
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 0.5rem; */
-    /* padding: 1rem; */
-    /* width: 100%; */
 }
 
 .footer-info {

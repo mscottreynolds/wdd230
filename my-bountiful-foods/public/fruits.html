@@ -32,9 +32,63 @@
             <li><a href="./about.html">About Us</a></li>
         </ul>
     </nav>
-    <main id="home">
+    <main id="fruits-page">
         <section id="fruits" class="card">
-            <h2>Fruits</h2>
+            <h2>Build a Fruit Drink</h2>
+            <form name="fruit-form">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Contact Name*
+                        <input type="text" name="contact-name" required>
+                    </label>
+                    <label>Contact Email*
+                        <input type="email" name="contact-email" placeholder="name@example.com" required>
+                    </label>
+                    <label>
+                        Contact Phone
+                        <input type="tel" name="contact-phone">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Drink Options</legend>
+
+                    <label>
+                        Fruit 1
+                        <select name="fruit1" id="fruit1">
+                            <option value="">Please Select &#9662;</option>
+                        </select>
+                    </label>
+                    <label>
+                        Fruit 2
+                        <select name="fruit2" id="fruit2">
+                            <option value="">Please Select &#9662;</option>
+                        </select>
+                    </label>
+                    <label>
+                        Fruit 3
+                        <select name="fruit3" id="fruit3">
+                            <option value="">Please Select &#9662;</option>
+                        </select>
+                    </label>
+
+                    <label>Special Instructions
+                        <textarea name="special-instructions"></textarea>
+                    </label>
+
+                </fieldset>
+                <!--
+                <input type="submit" value="Order Drink" class="button">-->
+            </form>
+            <button class="button" id="order-drink">
+                Order Drink
+            </button>
+            <p>* Required field</p>
+            <hr>
+        </section>
+        <section id="summary" class="card">
+            <h2>Summary</h2>
+        </section>
+
     </main>
     <footer>
         <div class="footer footer-info">
@@ -58,6 +112,7 @@
         </div>
     </footer>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/fruits.js"></script>
 </body>
 
 </html>
