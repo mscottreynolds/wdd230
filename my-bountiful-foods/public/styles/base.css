@@ -298,6 +298,10 @@ form label textarea {
     width: 98%;
 }
 
+.shadow-box {
+    box-shadow: 10px -2px 20px 2px rgba(0,0,0,.3);
+}
+
 .footer-social-media {
     display: flex;
     flex-direction: column;
