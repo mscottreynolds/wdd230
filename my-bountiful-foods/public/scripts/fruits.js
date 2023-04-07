@@ -46,6 +46,16 @@ const populateSummary = (fruitData) => {
             let calories = 0;
 
             const listElement = document.createElement("ul");
+
+            const itemOrderDate = document.createElement("li");
+
+            const orderDate = new Date();
+            const fulldateUK = new Intl.DateTimeFormat("en-UK", {
+                dateStyle: "full",
+            }).format(orderDate);
+            itemOrderDate.innerText = `Order Date: ${fulldateUK}`;
+            listElement.appendChild(itemOrderDate);
+
             const itemName = document.createElement("li");
             itemName.innerText = `Contact Name: ${contactName.value}`;
             listElement.appendChild(itemName);
@@ -126,7 +136,6 @@ const populateSummary = (fruitData) => {
             const paragraphDrinksOrdered = document.createElement("p");
             paragraphDrinksOrdered.innerText = numberOfDrinksOrdered;
             summarySection.appendChild(paragraphDrinksOrdered);
-            
         }
     }
 };
