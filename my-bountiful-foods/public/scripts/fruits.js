@@ -4,8 +4,7 @@ const orderDrinkButton = document.getElementById("order-drink");
 const buildFruitData = (data) => {
     const fruitData = [];
     data.forEach((entry) => {
-        // Build the records of Fruit data
-
+        // Build the records of Fruit data:
         // {
         //     "genus": "Malus",
         //     "name": "Apple",
@@ -19,7 +18,7 @@ const buildFruitData = (data) => {
         //       "calories": 52,
         //       "sugar": 10.3
         //     }
-        //   },
+        //   }
         fruitData[entry.id] = entry;
     });
     return fruitData;
@@ -140,32 +139,13 @@ const populateSummary = (fruitData) => {
     }
 };
 
-const populateFruitsForm = (data) => {
+const populateFruitsForm = (fruitData) => {
     const selectFruit1 = document.getElementById("fruit1");
     const selectFruit2 = document.getElementById("fruit2");
     const selectFruit3 = document.getElementById("fruit3");
-    const fruitData = [];
 
-    data.forEach(
+    fruitData.forEach(
         (entry) => {
-            // Build the records of Fruit data
-
-            // {
-            //     "genus": "Malus",
-            //     "name": "Apple",
-            //     "id": 6,
-            //     "family": "Rosaceae",
-            //     "order": "Rosales",
-            //     "nutritions": {
-            //       "carbohydrates": 11.4,
-            //       "protein": 0.3,
-            //       "fat": 0.4,
-            //       "calories": 52,
-            //       "sugar": 10.3
-            //     }
-            //   },
-            fruitData[entry.id] = entry;
-
             // Now build the option elements for each of the 3 select elements.
             const fruit1 = document.createElement("option");
             fruit1.value = `${entry.id}`;
@@ -188,8 +168,8 @@ const populateFruitsForm = (data) => {
 async function loadFruitData() {
     const response = await fetch(url);
     const data = await response.json();
-
-    populateFruitsForm(data);
+    const fruitData = buildFruitData(data);
+    populateFruitsForm(fruitData);
 }
 
 async function loadSummaryData() {

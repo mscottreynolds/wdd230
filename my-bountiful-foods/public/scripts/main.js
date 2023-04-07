@@ -40,6 +40,6 @@ if (hamburgerBtn) {
         let currentNumber = Number(
             window.localStorage.getItem("number-drinks-ordered")
         );
-        numberOfDrinksOrdered.textContent = `Total number of drinks ordered: ${currentNumber}`;
+        numberOfDrinksOrdered.textContent = `Welcome! The total number of drinks you have ordered are: ${currentNumber}`;
     }
 })();
